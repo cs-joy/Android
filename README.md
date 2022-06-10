@@ -20,24 +20,6 @@ The source code has been used to develop variants of Android on a range of other
 
 Android has been the best-selling OS worldwide on smartphones since 2011 and on tablets since 2013. As of May 2021, it has over three billion monthly active users, the largest installed base of any operating system,[18] and as of January 2021, the Google Play Store features over 3 million apps.[19] Android 12, released on October 4, 2021, is the latest version.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## Features
 Main article: [List of features in Android](https://en.wikipedia.org/wiki/List_of_features_in_Android)
 
@@ -112,3 +94,14 @@ Since Android devices are usually battery-powered, Android is designed to manage
 Some settings for use by developers for debugging and power users are located in a "Developer options" sub menu, such as the ability to highlight updating parts of the display, show an overlay with the current status of the touch screen, show touching spots for possible use in screencasting, notify the user of unresponsive background processes with the option to end them ("Show all ANRs", i.e. "App's Not Responding"), prevent a Bluetooth audio client from controlling the system volume ("Disable absolute volume"), and adjust the duration of transition animations or deactivate them completely to speed up navigation.
 
 Developer options are initially hidden since Android 4.2 "Jelly Bean", but can be enabled by actuating the operating system's build number in the device information seven times. Hiding developers options again requires deleting user data for the "Settings" app, possibly resetting some other preferences.
+
+
+## Hardware
+See also: Android hardware requirements
+The main hardware platform for Android is ARM (the ARMv7 and ARMv8-A architectures), with x86 and x86-64 architectures also officially supported in later versions of Android.[147][148][149] The unofficial Android-x86 project provided support for x86 architectures ahead of the official support.[150][151] Since 2012, Android devices with Intel processors began to appear, including phones[152] and tablets. While gaining support for 64-bit platforms, Android was first made to run on 64-bit x86 and then on ARM64. Since Android 5.0 "Lollipop", 64-bit variants of all platforms are supported in addition to the 32-bit variants.[147] An unofficial experimental port of the operating system to the RISC-V architecture was released in 2021.[153]
+
+Requirements for the minimum amount of RAM for devices running Android 7.1 range from in practice 2 GB for best hardware, down to 1 GB for the most common screen. Android supports all versions of OpenGL ES and Vulkan (and version 1.1 available for some devices[154]).
+
+Android devices incorporate many optional hardware components, including still or video cameras, GPS, orientation sensors, dedicated gaming controls, accelerometers, gyroscopes, barometers, magnetometers, proximity sensors, pressure sensors, thermometers, and touchscreens. Some hardware components are not required, but became standard in certain classes of devices, such as smartphones, and additional requirements apply if they are present. Some other hardware was initially required, but those requirements have been relaxed or eliminated altogether. For example, as Android was developed initially as a phone OS, hardware such as microphones were required, while over time the phone function became optional.[125] Android used to require an autofocus camera, which was relaxed to a fixed-focus camera[125] if present at all, since the camera was dropped as a requirement entirely when Android started to be used on set-top boxes.
+
+In addition to running on smartphones and tablets, several vendors run Android natively on regular PC hardware with a keyboard and mouse.[155][156][157][158] In addition to their availability on commercially available hardware, similar PC hardware-friendly versions of Android are freely available from the Android-x86 project, including customized Android 4.4.[159] Using the Android emulator that is part of the Android SDK, or third-party emulators, Android can also run non-natively on x86 architectures.[160][161] Chinese companies are building a PC and mobile operating system, based on Android, to "compete directly with Microsoft Windows and Google Android".[162] The Chinese Academy of Engineering noted that "more than a dozen" companies were customizing Android following a Chinese ban on the use of Windows 8 on government PCs.
