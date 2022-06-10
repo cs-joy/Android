@@ -1,3 +1,5 @@
+![Logo](https://upload.wikimedia.org/wikipedia/commons/3/31/Android_robot_head.svg "Android")
+
 # Android
 
 ![Android](https://upload.wikimedia.org/wikipedia/commons/9/92/Android_logo_%282007-2014%29.svg "First Android Logo> 2007-2014")
@@ -13,8 +15,6 @@ Most versions of Android are proprietary. The core components are taken from the
 ![Android](https://upload.wikimedia.org/wikipedia/commons/f/fc/Android_logo_%282015-2019%29.svg "Third Android Logo> 2015-2019")
 
 Over 70 percent of Android smartphones run Google's ecosystem; some with vendor-customized user interface and software suite, such as TouchWiz and later One UI by Samsung, and HTC Sense. Competing Android ecosystems and forks include Fire OS (developed by Amazon), ColorOS by OPPO, OriginOS by vivo and MagicUI by Honor or custom ROM such as LineageOS. However, the "Android" name and logo are trademarks of Google which imposes standards to restrict the use of Android branding by "uncertified" devices outside their ecosystem.
-
-![Android](https://upload.wikimedia.org/wikipedia/commons/3/3b/Android_new_logo_2019.svg "Fourth Android Logo> 2019-Present")
 
 The source code has been used to develop variants of Android on a range of other electronics, such as game consoles, digital cameras, portable media players, PCs, each with a specialized user interface. Some well known derivatives include Android TV for televisions and Wear OS for wearables, both developed by Google. Software packages on Android, which use the APK format, are generally distributed through proprietary application stores like Google Play Store, Amazon Appstore (including for Windows 11), Samsung Galaxy Store, Huawei AppGallery, Cafe Bazaar, and GetJar, or open source platforms like Aptoide or F-Droid.
 
@@ -367,5 +367,7 @@ At Google I/O in May 2016, Google announced Daydream, a virtual reality platform
 The mascot of Android is a green android robot, as related to the software's name. Although it has no official name, the Android team at Google reportedly call it "Bugdroid".
 
 It was designed by then-Google graphic designer Irina Blok on November 5, 2007, when Android was announced. Contrary to reports that she was tasked with a project to create an icon, Blok confirmed in an interview that she independently developed it and made it open source. The robot design was initially not presented to Google, but it quickly became commonplace in the Android development team, with various variations of it created by the developers there who liked the figure, as it was free under a Creative Commons license. Its popularity amongst the development team eventually led to Google adopting it as an official icon as part of the Android logo when it launched to consumers in 2008.
+
+![Android](https://upload.wikimedia.org/wikipedia/commons/3/3b/Android_new_logo_2019.svg "Fourth Android Logo> 2019-Present")
 
 [Source](https://en.wikipedia.org/wiki/Android_(operating_system))
