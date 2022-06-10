@@ -14,7 +14,7 @@ Most versions of Android are proprietary. The core components are taken from the
 
 Over 70 percent of Android smartphones run Google's ecosystem; some with vendor-customized user interface and software suite, such as TouchWiz and later One UI by Samsung, and HTC Sense. Competing Android ecosystems and forks include Fire OS (developed by Amazon), ColorOS by OPPO, OriginOS by vivo and MagicUI by Honor or custom ROM such as LineageOS. However, the "Android" name and logo are trademarks of Google which imposes standards to restrict the use of Android branding by "uncertified" devices outside their ecosystem.
 
-
+![Android](https://upload.wikimedia.org/wikipedia/commons/3/3b/Android_new_logo_2019.svg "Fourth Android Logo> 2019-Present")
 
 The source code has been used to develop variants of Android on a range of other electronics, such as game consoles, digital cameras, portable media players, PCs, each with a specialized user interface. Some well known derivatives include Android TV for televisions and Wear OS for wearables, both developed by Google. Software packages on Android, which use the APK format, are generally distributed through proprietary application stores like Google Play Store, Amazon Appstore (including for Windows 11), Samsung Galaxy Store, Huawei AppGallery, Cafe Bazaar, and GetJar, or open source platforms like Aptoide or F-Droid.
 
