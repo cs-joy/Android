@@ -302,3 +302,12 @@ As of the end of 2013, over 191.6 million Android tablets had sold in three year
 According to StatCounter's web use statistics, as of 2020, Android tablets represent the majority of tablet devices used in Africa (70%), South America (65%), while less than half elsewhere, e.g. Europe (44%), Asia (44%), North America (34%) and Oceania/Australia (18%). There are countries on all continents where Android tablets are the majority, for example, Mexico.[415]
 
 In March 2016, Galen Gruman of InfoWorld stated that Android devices could be a "real part of your business [..] there's no longer a reason to keep Android at arm's length. It can now be as integral to your mobile portfolio as Apple's iOS devices are".[416] A year earlier, Gruman had stated that Microsoft's own mobile Office apps were "better on iOS and Android" than on Microsoft's own Windows 10 devices.
+
+### Platform information
+Main article: [Android version history](https://en.wikipedia.org/wiki/Android_version_history)
+
+Android 11 is, and was just before the release of Android 12, the most popular Android version, on both smartphones and tablets.
+
+As of May 2022, Android 11 is most popular on smartphones at 35%, with Android 10 2nd at 24%, then Android 12 at 12%. Usage of Android 10 and newer, i.e. supported versions, is at 71%, the rest of users are not supported with security updates. Android 12 is most popular in a few countries including the United States, but Android 11 is most used in most countries, including India, while in many others, including China, Android 10 is the most popular version.
+
+On tablets, Android 11 is most popular at 27% overtaking Android 9.0 Pie in July 2021, which is now second at 16% (topped out at over 20%). Usage of Android 10 and newer, i.e. supported versions, is at 34% on Android tablets, with Pie 9.O, until recently supported, at 50.4%. The usage share varies a lot by country: e.g. Android 9.0 Pie is the version with the greatest usage share in the United States (also in the UK) at 34%, while Android 11 is also very popular e.g. most used in India, Canada, Australia, and most European countries, and others all over the world; Oreo 8.1 most used in China.
