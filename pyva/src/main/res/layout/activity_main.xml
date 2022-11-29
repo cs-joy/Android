@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:id="@+id/et1"
+       android:layout_margin="20dp"
+       android:padding="20dp"
+       android:hint="Enter first number"
+       android:textColorHint="@android:color/black" />
+
+    <EditText
+        android:layout_below="@id/et1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/et2"
+        android:layout_margin="20dp"
+        android:padding="20dp"
+        android:hint="Enter Second number"
+        android:textColorHint="@android:color/black" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn"
+        android:text="Submit"
+        android:layout_below="@id/et2"
+        android:layout_margin="20dp"
+        android:padding="20dp" />
+
+    <TextView
+        android:id="@+id/text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn"
+        android:textSize="60sp"
+        android:text="Hello"
+        android:textAlignment="center" />
+
+
+</RelativeLayout>
