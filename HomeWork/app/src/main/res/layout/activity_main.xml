@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/edtTxtNumber2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:ems="10"
+        android:hint="Second Number"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtTxtNumber1" />
+
+    <EditText
+        android:id="@+id/edtTxtNumber1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:ems="10"
+        android:hint="First Number"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnAddition"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:onClick="onClickBtnAdd"
+        android:text="+"
+        app:layout_constraintEnd_toStartOf="@+id/btnSubtraction"
+        app:layout_constraintStart_toStartOf="@+id/edtTxtNumber2"
+        app:layout_constraintTop_toBottomOf="@+id/edtTxtNumber2" />
+
+    <Button
+        android:id="@+id/btnSubtraction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:onClick="onClickBtnSub"
+        android:text="-"
+        app:layout_constraintEnd_toEndOf="@+id/edtTxtNumber2"
+        app:layout_constraintTop_toBottomOf="@+id/edtTxtNumber2" />
+
+    <Button
+        android:id="@+id/btnMultiplication"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:onClick="onClickBtnMulti"
+        android:text="*"
+        app:layout_constraintStart_toStartOf="@+id/btnAddition"
+        app:layout_constraintTop_toBottomOf="@+id/btnAddition" />
+
+    <Button
+        android:id="@+id/btnDivision"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:onClick="onClickBtnDiv"
+        android:text="/"
+        app:layout_constraintEnd_toEndOf="@+id/btnSubtraction"
+        app:layout_constraintStart_toEndOf="@+id/btnMultiplication"
+        app:layout_constraintTop_toBottomOf="@+id/btnSubtraction" />
+
+    <TextView
+        android:id="@+id/multiplicationResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Multiplication"
+        app:layout_constraintStart_toStartOf="@+id/additionResult"
+        app:layout_constraintTop_toBottomOf="@+id/additionResult" />
+
+    <TextView
+        android:id="@+id/subtractionResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="-60dp"
+        android:text="Subtraction"
+        app:layout_constraintEnd_toEndOf="@+id/btnDivision"
+        app:layout_constraintStart_toEndOf="@+id/additionResult"
+        app:layout_constraintTop_toBottomOf="@+id/btnDivision" />
+
+    <TextView
+        android:id="@+id/additionResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Addition"
+        app:layout_constraintStart_toStartOf="@+id/btnMultiplication"
+        app:layout_constraintTop_toBottomOf="@+id/btnMultiplication" />
+
+    <TextView
+        android:id="@+id/divisionResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="-60dp"
+        android:text="Division"
+        app:layout_constraintEnd_toEndOf="@+id/subtractionResult"
+        app:layout_constraintStart_toEndOf="@+id/multiplicationResult"
+        app:layout_constraintTop_toBottomOf="@+id/subtractionResult" />
+</androidx.constraintlayout.widget.ConstraintLayout>
