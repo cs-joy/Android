@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="100dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello"
+        android:id="@+id/txtHello"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:textSize="20dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:layout_centerInParent="true"
+        android:id="@+id/edtTxtName"
+        android:textColor="@color/purple_700"
+        android:textStyle="italic"
+        android:inputType="textEmailAddress"
+        android:layout_below="@id/txtHello"
+        android:layout_marginTop="45dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Say Something"
+        android:id="@+id/btnSay"
+        android:layout_below="@id/edtTxtName"
+        android:layout_marginTop="5dp"
+        android:layout_centerInParent="true"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello World!"
+        android:layout_centerInParent="true"
+        android:layout_below="@id/btnSay"
+        android:layout_marginTop="45dp"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        android:textColor="@color/teal_700"
+        android:background="#DFCAFF"
+        android:id="@+id/txtWelcome"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Say Hello"
+        android:layout_below="@id/txtWelcome"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:id="@+id/btnHello"
+        android:onClick="onHelloButtonClick"/>
+
+    <!-- Another way to create and demonstrate button -->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Program"
+        android:layout_below="@+id/btnHello"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:id="@+id/btnProgram"/>
+
+    <!-- Another way to create and demonstrate button with switch-->
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Switch"
+        android:layout_below="@+id/btnProgram"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:id="@+id/btnSwitch"/>
+
+
+
+</RelativeLayout>
