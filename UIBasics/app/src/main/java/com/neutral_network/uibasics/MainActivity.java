@@ -3,23 +3,32 @@ package com.neutral_network.uibasics;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
+import android.widget.CheckBox;
+import android.widget.CompoundButton;
+import android.widget.ProgressBar;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
-    // second way for button
-    @Override
-    public void onClick(View view) {
-        switch (view.getId()) {
-            case R.id.btnSwitch:
-                // Toast
-                // Toast message is better for testing purposes
-                Toast.makeText(this, "Hello Toast", Toast.LENGTH_SHORT) .show();
+public class MainActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener {
+    private CheckBox checkboxHarry, checkboxMatrix, checkboxJoker;
+    private RadioGroup rgMaritalStatus;
+    private ProgressBar progressBar, pbHorizontal;
 
-                // Console
-                System.out.println("Hello, Switch on console");
+    @Override
+    public void onCheckedChanged(RadioGroup group, int checkedId) {
+        switch (checkedId) {
+            case R.id.rbMarried:
+                Toast.makeText(MainActivity.this, "You're married", Toast.LENGTH_SHORT) .show();
+                break;
+            case R.id.rbSingle:
+                Toast.makeText(MainActivity.this, "You're single", Toast.LENGTH_SHORT) .show();
+                progressBar.setVisibility(View.VISIBLE);
+                break;
+            case R.id.rbInRel:
+                Toast.makeText(MainActivity.this, "In an open relationship, congratulations!", Toast.LENGTH_SHORT) .show();
+                progressBar.setVisibility(View.GONE);
                 break;
             default:
                 break;
@@ -29,34 +38,71 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_main);
-        setContentView(R.layout.activity_read);
+        setContentView(R.layout.ui_basic3);
 
-        // first way
-        Button btnPrgm = findViewById(R.id.btnProgram);
-        btnPrgm.setOnClickListener(new View.OnClickListener() {
+        //instantiate those objects
+        checkboxHarry = findViewById(R.id.checkboxHarry);
+        checkboxMatrix = findViewById(R.id.checkboxMatrix);
+        checkboxJoker = findViewById(R.id.checkboxJoker);
+
+        // radio group
+        rgMaritalStatus = findViewById(R.id.rgMaritalStatus);
+
+        // progress bar
+        progressBar = findViewById(R.id.progressBar);
+
+        // second progress bar
+        pbHorizontal = findViewById(R.id.pbHorizontal);
+        Thread thread = new Thread(new Runnable() {
             @Override
-            public void onClick(View view) {
-                System.out.println("Button Working.. Hello Console!");
+            public void run() {
+                for (int i=0; i<10; i++) {
+                    pbHorizontal.incrementProgressBy(10);
+                    //Thread.sleep(500);
+                    SystemClock.sleep(500);
+                }
+            }
+        });
+        thread.start();
+        //pbHorizontal.getProgress();
+
+
+        int checkedButton = rgMaritalStatus.getCheckedRadioButtonId();
+        switch (checkedButton) {
+            case R.id.rbMarried:
+                Toast.makeText(MainActivity.this, "You're married", Toast.LENGTH_SHORT) .show();
+                break;
+            case R.id.rbSingle:
+                Toast.makeText(MainActivity.this, "You're single", Toast.LENGTH_SHORT) .show();
+                break;
+            case R.id.rbInRel:
+                Toast.makeText(MainActivity.this, "In an open relationship, congratulations!", Toast.LENGTH_SHORT) .show();
+                break;
+            default:
+                break;
+        }
+
+        rgMaritalStatus.setOnCheckedChangeListener(this);
+
+        if (checkboxHarry.isChecked()) {
+            Toast.makeText(MainActivity.this, "You have watched Harry Potter, yay", Toast.LENGTH_SHORT) .show();
+        } else {
+            Toast.makeText(MainActivity.this, "You NEED to watch Harry Potter", Toast.LENGTH_SHORT) .show();
+        }
+
+        // click listeners
+        checkboxHarry.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    Toast.makeText(MainActivity.this, "You have watched Harry Potter, yay", Toast.LENGTH_SHORT) .show();
+                } else {
+                    Toast.makeText(MainActivity.this, "You NEED to watch Harry Potter", Toast.LENGTH_SHORT) .show();
+                }
             }
         });
 
-        // second way
-        Button btnSwtch = findViewById(R.id.btnSwitch);
-        btnSwtch.setOnClickListener(this);
 
-        btnSwtch.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                Toast.makeText(MainActivity.this, "Long Press", Toast.LENGTH_LONG) .show();
-                return true;
-            }
-        });
-    }
-
-    public void onHelloButtonClick(View view) {
-        // R = Resources and this give us permission to access all static files inside of our application
-        TextView txtWelcome = findViewById(R.id.txtWelcome);
-        txtWelcome.setText("Hello again :)");
+        // same for others two checkbox(checkboxMatrix and checkboxJoker)
     }
 }
