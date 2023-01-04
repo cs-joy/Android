@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">UI Basics</string>
+    <string-array name="dept">
+        <item>Service Representatives</item>
+        <item>Manager</item>
+        <item>CEO</item>
+        <item>Partner</item>
+        <item>Customer Support</item>
+    </string-array>
 </resources>
