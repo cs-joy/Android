@@ -9,4 +9,7 @@
     </string-array>
 
     <string name="hello_txt">Hello</string>
+
+    <string name="menu_settings">Settings</string>
+    <string name="alarm_menu">Alarm</string>
 </resources>

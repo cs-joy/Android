@@ -17,4 +17,24 @@
         android:id="@+id/txtHello"
         android:textColor="@color/red"/>
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="TextView"
+        android:textColor="@color/purple_500"
+        app:layout_constraintEnd_toEndOf="@+id/txtHello"
+        app:layout_constraintStart_toStartOf="@+id/txtHello"
+        app:layout_constraintTop_toBottomOf="@+id/txtHello" />
+
+    <include
+        layout="@layout/trademark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
