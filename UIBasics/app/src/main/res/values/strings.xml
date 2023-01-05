@@ -7,4 +7,6 @@
         <item>Partner</item>
         <item>Customer Support</item>
     </string-array>
+
+    <string name="hello_txt">Hello</string>
 </resources>
