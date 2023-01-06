@@ -1,9 +1,13 @@
 package com.neutral_network.materialdesign;
 
+import android.annotation.SuppressLint;
+import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -14,7 +18,10 @@ public class ContactsRecViewAdapter extends RecyclerView.Adapter<ContactsRecView
 
     private ArrayList<Contact> contacts = new ArrayList<>();
 
-    public ContactsRecViewAdapter() {
+    private Context context;
+
+    public ContactsRecViewAdapter(Context context) {
+        this.context = context;
     }
 
     @NonNull
@@ -26,8 +33,16 @@ public class ContactsRecViewAdapter extends RecyclerView.Adapter<ContactsRecView
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.txtName.setText(contacts.get(position).getName());
+        
+        // click listener
+        holder.parent.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(context, contacts.get(position).getName() + " Clicked", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     @Override
@@ -43,11 +58,13 @@ public class ContactsRecViewAdapter extends RecyclerView.Adapter<ContactsRecView
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView txtName;
+        private RelativeLayout parent;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             txtName = itemView.findViewById(R.id.txtView);
+            parent = itemView.findViewById(R.id.contact_parent);
         }
     }
 }
