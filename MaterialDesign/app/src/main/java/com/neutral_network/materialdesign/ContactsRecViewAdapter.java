@@ -7,7 +7,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
+
 public class ContactsRecViewAdapter extends RecyclerView.Adapter<ContactsRecViewAdapter.ViewHolder> {
+
+    private ArrayList<Contact> contacts = new ArrayList<>();
 
     public ContactsRecViewAdapter() {
     }
@@ -25,7 +29,12 @@ public class ContactsRecViewAdapter extends RecyclerView.Adapter<ContactsRecView
 
     @Override
     public int getItemCount() {
-        return 0;
+        return contacts.size();
+    }
+
+    public void setContacts(ArrayList<Contact> contacts) {
+        this.contacts = contacts;
+        notifyDataSetChanged(); // each time change the value of our contacts from the array list Recycler View notify us
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
