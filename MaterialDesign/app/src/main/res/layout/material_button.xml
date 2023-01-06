@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/helloDefaultBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/orange"
+        android:text="Say Hello" />
+
+    <Button
+        android:id="@+id/helloUnelevatedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Say Hello"
+        android:layout_below="@+id/helloDefaultBtn"
+        android:layout_marginTop="25dp"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"/>
+
+    <Button
+        android:id="@+id/helloOutlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/helloUnelevatedButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="35dp"
+        android:text="Say Hello"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"/>
+
+    <Button
+        android:id="@+id/helloTextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Say Hello"
+        android:layout_below="@+id/helloOutlinedButton"
+        android:layout_marginTop="35dp"
+        style="@style/Widget.MaterialComponents.Button.TextButton"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/floatingActionBtn"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/ic_add"
+        android:backgroundTint="@color/orange"
+        app:backgroundTint="@color/white"
+        app:rippleColor="@color/white"/>
+
+</RelativeLayout>
