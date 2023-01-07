@@ -183,7 +183,7 @@ public class MainActivity extends AppCompatActivity {
 //        contactsRecView.setLayoutManager(new GridLayoutManager(this, 2)); // in the grid layout manager second arguments might follow as number of columns
 
         ////////////////////// this section is for setting onclicklistener on each item
-        ContactsRecViewAdapter adapter = new ContactsRecViewAdapter(this);
+        ContactRecViewAdapterWithCardView adapter = new ContactRecViewAdapterWithCardView(this);
         adapter.setContacts(contacts);
 
         contactsRecView.setAdapter(adapter);
