@@ -92,12 +92,12 @@ public class MainActivity extends AppCompatActivity {
         contactsRecView.setAdapter(adapter);
 
         // layout manager
-        contactsRecView.setLayoutManager(new LinearLayoutManager(this)); // linear layout manager // default orientation: vertical
+        //contactsRecView.setLayoutManager(new LinearLayoutManager(this)); // linear layout manager // default orientation: vertical
         // horizontal orientation
         //contactsRecView.setLayoutManager((new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)));
 
         // Grid Layout Manager
-        //contactsRecView.setLayoutManager(new GridLayoutManager(this, 2)); // in the grid layout manager second arguments might follow as number of columns
+        contactsRecView.setLayoutManager(new GridLayoutManager(this, 2)); // in the grid layout manager second arguments might follow as number of columns
 
     }
 }
