@@ -16,7 +16,10 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.recycler_view_p_one);
+        // linear layout manager
+        setContentView(R.layout.recycler_view_p_one_liniear_layout_manager);
+
+        //setContentView(R.layout.recycler_view_p_one);
 
         contactsRecView = findViewById(R.id.contactsRecView);
 
@@ -89,12 +92,12 @@ public class MainActivity extends AppCompatActivity {
         contactsRecView.setAdapter(adapter);
 
         // layout manager
-        //contactsRecView.setLayoutManager(new LinearLayoutManager(this)); // linear layout manager // default orientation: vertical
+        contactsRecView.setLayoutManager(new LinearLayoutManager(this)); // linear layout manager // default orientation: vertical
         // horizontal orientation
         //contactsRecView.setLayoutManager((new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)));
 
         // Grid Layout Manager
-        contactsRecView.setLayoutManager(new GridLayoutManager(this, 2)); // in the grid layout manager second arguments might follow as number of columns
+        //contactsRecView.setLayoutManager(new GridLayoutManager(this, 2)); // in the grid layout manager second arguments might follow as number of columns
 
     }
 }
