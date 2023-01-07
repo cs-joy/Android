@@ -28,7 +28,7 @@ public class ContactRecViewAdapterWithCardView extends RecyclerView.Adapter<Cont
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.contacts_list_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.contact_list_item_cardview, parent, false);
         ViewHolder holder = new ViewHolder(view);
         return holder;
     }
