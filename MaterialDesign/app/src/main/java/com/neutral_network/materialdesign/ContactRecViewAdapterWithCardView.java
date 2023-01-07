@@ -5,6 +5,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -12,6 +13,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
@@ -45,6 +48,12 @@ public class ContactRecViewAdapterWithCardView extends RecyclerView.Adapter<Cont
                 Toast.makeText(context, contacts.get(position).getName() + " Clicked", Toast.LENGTH_SHORT).show();
             }
         });
+
+        // Glide for image - simplest way to use glide
+        Glide.with(context)
+                .asBitmap()
+                .load(contacts.get(position).getImageUrl()) // image url load
+                .into(holder.image); // image view
     }
 
     @Override
@@ -61,6 +70,7 @@ public class ContactRecViewAdapterWithCardView extends RecyclerView.Adapter<Cont
 
         private CardView contact_parent_cardview;
         private TextView txtName, txtEmail;
+        private ImageView image;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
@@ -68,6 +78,7 @@ public class ContactRecViewAdapterWithCardView extends RecyclerView.Adapter<Cont
             contact_parent_cardview = itemView.findViewById(R.id.contact_parent_cardview);
             txtName = itemView.findViewById(R.id.txtName);
             txtEmail = itemView.findViewById(R.id.txtEmail);
+            image = itemView.findViewById(R.id.contact_image);
         }
     }
 }
