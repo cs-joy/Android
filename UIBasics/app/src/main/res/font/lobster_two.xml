@@ -1,6 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<font-family xmlns:android="http://schemas.android.com/apk/res/android">
+<font-family xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <!-- for ignoring this warning(Attribute fontStyle is only used in API level 26 and higher (current min is 21)
+    ) use `app` instead of `android` [one header will be add automatically or when you do that manually you might be
+    need to include this(xmlns:app="http://schemas.android.com/apk/res-auto") header file in top
+    of the position in this file]-->
+
+    <!-- for example -->
+
+    <font
+        app:font="@font/lobster_two_regular"
+        app:fontStyle="normal"
+        app:fontWeight="400"/>
+
+    <font
+        app:font="@font/lobster_two_italic"
+        app:fontStyle="italic"
+        app:fontWeight="400"/>
+
+    <font
+        app:font="@font/lobster_two_bold"
+        app:fontStyle="normal"
+        app:fontWeight="700"/>
+
+    <font
+        app:font="@font/lobster_two_bold_italic"
+        app:fontStyle="italic"
+        app:fontWeight="700"/>
+
+    <!-- in this way we can solve or ignore the warning
+
+     but there haven't much different to use `app` instead of `android` -->
+    
+
+    <!--
     <font
         android:font="@font/lobster_two_regular"
         android:fontStyle="normal"
@@ -20,5 +54,6 @@
         android:font="@font/lobster_two_bold_italic"
         android:fontStyle="italic"
         android:fontWeight="700"/>
+        -->
 
 </font-family>
