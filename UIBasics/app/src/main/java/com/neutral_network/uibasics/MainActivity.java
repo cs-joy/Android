@@ -9,6 +9,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.different_xm_files_part2);
+        setContentView(R.layout.fonts);
     }
 }
