@@ -10,3 +10,6 @@ In every android application we have main four components
 
 [Material Design](https://m3.material.io/)
 - [Github](https://www.github.com/material-components)
+
+
+- [Font Weight](https://developer.android.com/reference/kotlin/androidx/compose/ui/text/font/FontWeight)
