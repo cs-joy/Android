@@ -10,7 +10,7 @@
         android:id="@+id/txtHelloWorld"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/lobster_two"
+        android:fontFamily="@font/lobster_two_regular"
         android:textStyle="bold"
         android:text="Hello World"
         app:layout_constraintBottom_toBottomOf="parent"
