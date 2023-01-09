@@ -7,7 +7,7 @@
     tools:context=".MainActivity">
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnPickImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Button"
@@ -15,7 +15,7 @@
         tools:layout_editor_absoluteY="75dp" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageProfile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="44dp"
@@ -23,7 +23,7 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/edtTxtName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -33,7 +33,7 @@
         tools:layout_editor_absoluteY="203dp" />
 
     <EditText
-        android:id="@+id/editTextTextPassword3"
+        android:id="@+id/edtTxtPassRepeat"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -42,7 +42,7 @@
         tools:layout_editor_absoluteY="393dp" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/edtTxtPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -51,7 +51,7 @@
         tools:layout_editor_absoluteY="330dp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/edtTxtEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -61,7 +61,7 @@
         tools:layout_editor_absoluteY="267dp" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txtGender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
@@ -69,42 +69,43 @@
         tools:layout_editor_absoluteY="448dp" />
 
     <RadioGroup
+        android:id="@+id/rgGender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/txtGender"
         tools:layout_editor_absoluteX="50dp">
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/rbMale"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:checked="true"
             android:text="RadioButton" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/rbFemale"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="RadioButton" />
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/rbOther"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="RadioButton" />
     </RadioGroup>
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/spinnerCountry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="124dp"
         tools:layout_editor_absoluteY="552dp" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/txtCountry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
@@ -112,7 +113,7 @@
         tools:layout_editor_absoluteY="552dp" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Button"
@@ -120,7 +121,7 @@
         tools:layout_editor_absoluteY="667dp" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/txtAgreement"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
@@ -128,7 +129,7 @@
         tools:layout_editor_absoluteY="599dp" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/agreementCheck"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:checked="true"
