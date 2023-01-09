@@ -39,7 +39,7 @@
         android:ems="10"
         android:inputType="textPassword"
         tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="406dp" />
+        tools:layout_editor_absoluteY="428dp" />
 
     <EditText
         android:id="@+id/edtTxtPassword"
@@ -48,7 +48,7 @@
         android:ems="10"
         android:inputType="textPassword"
         tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="343dp" />
+        tools:layout_editor_absoluteY="349dp" />
 
     <EditText
         android:id="@+id/edtTxtEmail"
@@ -66,13 +66,12 @@
         android:layout_height="wrap_content"
         android:text="TextView"
         tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="458dp" />
+        tools:layout_editor_absoluteY="481dp" />
 
     <RadioGroup
         android:id="@+id/rgGender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:orientation="horizontal"
         app:layout_constraintTop_toBottomOf="@+id/txtGender"
         tools:layout_editor_absoluteX="50dp">
@@ -97,36 +96,28 @@
             android:text="RadioButton" />
     </RadioGroup>
 
-    <Spinner
-        android:id="@+id/spinnerCountry"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="124dp"
-        tools:layout_editor_absoluteY="552dp" />
-
     <TextView
         android:id="@+id/txtCountry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        tools:layout_editor_absoluteX="52dp"
-        tools:layout_editor_absoluteY="552dp" />
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="564dp" />
+
+    <Spinner
+        android:id="@+id/spinnerCountry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="126dp"
+        tools:layout_editor_absoluteY="564dp" />
 
     <Button
         android:id="@+id/btnRegister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Button"
-        tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="667dp" />
-
-    <TextView
-        android:id="@+id/txtAgreement"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        tools:layout_editor_absoluteX="50dp"
-        tools:layout_editor_absoluteY="599dp" />
+        tools:layout_editor_absoluteX="184dp"
+        tools:layout_editor_absoluteY="675dp" />
 
     <CheckBox
         android:id="@+id/agreementCheck"
@@ -138,18 +129,42 @@
         tools:layout_editor_absoluteY="627dp" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/txtAgreement"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        tools:layout_editor_absoluteX="54dp"
-        tools:layout_editor_absoluteY="186dp" />
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="599dp" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/txtWarnName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        tools:layout_editor_absoluteX="49dp"
-        tools:layout_editor_absoluteY="261dp" />
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="180dp" />
+
+    <TextView
+        android:id="@+id/txtWarnEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="256dp" />
+
+    <TextView
+        android:id="@+id/txtWarnPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="330dp" />
+
+    <TextView
+        android:id="@+id/txtWarnPassRepeat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="409dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
