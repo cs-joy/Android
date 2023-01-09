@@ -6,21 +6,21 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="43dp"
-        tools:layout_editor_absoluteY="54dp"
-        tools:srcCompat="@tools:sample/avatars" />
-
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Button"
-        tools:layout_editor_absoluteX="228dp"
-        tools:layout_editor_absoluteY="94dp" />
+        tools:layout_editor_absoluteX="229dp"
+        tools:layout_editor_absoluteY="75dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="35dp"
+        tools:srcCompat="@tools:sample/avatars" />
 
     <EditText
         android:id="@+id/editTextTextPersonName"
@@ -29,18 +29,17 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
-        tools:layout_editor_absoluteX="48dp"
-        tools:layout_editor_absoluteY="233dp" />
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="203dp" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/editTextTextPassword3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Name"
-        tools:layout_editor_absoluteX="43dp"
-        tools:layout_editor_absoluteY="310dp" />
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="393dp" />
 
     <EditText
         android:id="@+id/editTextTextPassword"
@@ -49,22 +48,91 @@
         android:ems="10"
         android:inputType="textPassword"
         tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="392dp" />
+        tools:layout_editor_absoluteY="330dp" />
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/editTextTextPersonName2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:inputType="textPassword"
-        tools:layout_editor_absoluteX="48dp"
-        tools:layout_editor_absoluteY="471dp" />
+        android:inputType="textPersonName"
+        android:text="Name"
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="267dp" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        tools:layout_editor_absoluteX="49dp"
-        tools:layout_editor_absoluteY="474dp" />
+        tools:layout_editor_absoluteX="44dp"
+        tools:layout_editor_absoluteY="448dp" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        tools:layout_editor_absoluteX="50dp">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="RadioButton" />
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RadioButton" />
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RadioButton" />
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="124dp"
+        tools:layout_editor_absoluteY="552dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="52dp"
+        tools:layout_editor_absoluteY="552dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        tools:layout_editor_absoluteX="160dp"
+        tools:layout_editor_absoluteY="667dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="599dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:text="CheckBox"
+        tools:layout_editor_absoluteX="50dp"
+        tools:layout_editor_absoluteY="627dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
