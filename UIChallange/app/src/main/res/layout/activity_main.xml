@@ -30,7 +30,7 @@
         android:inputType="textPersonName"
         android:text="Name"
         tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="203dp" />
+        tools:layout_editor_absoluteY="199dp" />
 
     <EditText
         android:id="@+id/edtTxtPassRepeat"
@@ -39,7 +39,7 @@
         android:ems="10"
         android:inputType="textPassword"
         tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="393dp" />
+        tools:layout_editor_absoluteY="406dp" />
 
     <EditText
         android:id="@+id/edtTxtPassword"
@@ -48,7 +48,7 @@
         android:ems="10"
         android:inputType="textPassword"
         tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="330dp" />
+        tools:layout_editor_absoluteY="343dp" />
 
     <EditText
         android:id="@+id/edtTxtEmail"
@@ -58,7 +58,7 @@
         android:inputType="textPersonName"
         android:text="Name"
         tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="267dp" />
+        tools:layout_editor_absoluteY="275dp" />
 
     <TextView
         android:id="@+id/txtGender"
@@ -66,7 +66,7 @@
         android:layout_height="wrap_content"
         android:text="TextView"
         tools:layout_editor_absoluteX="44dp"
-        tools:layout_editor_absoluteY="448dp" />
+        tools:layout_editor_absoluteY="458dp" />
 
     <RadioGroup
         android:id="@+id/rgGender"
@@ -136,4 +136,20 @@
         android:text="CheckBox"
         tools:layout_editor_absoluteX="50dp"
         tools:layout_editor_absoluteY="627dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="186dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="49dp"
+        tools:layout_editor_absoluteY="261dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
