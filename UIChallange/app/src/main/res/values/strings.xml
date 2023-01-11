@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">UIChallange</string>
+
+    <array name="countrties">
+        <item>Norway</item>
+        <item>Bangladesh</item>
+        <item>Canada</item>
+        <item>United Kingdom</item>
+        <item>United States</item>
+    </array>
 </resources>
