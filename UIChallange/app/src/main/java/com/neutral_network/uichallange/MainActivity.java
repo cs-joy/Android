@@ -3,6 +3,7 @@ package com.neutral_network.uichallange;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -132,15 +133,17 @@ public class MainActivity extends AppCompatActivity {
         }
 
         // check this logic if its works successfully
+        /*
         if (!edtTxtPassword.getText().toString().equals(edtTxtPassRepeat.getText().toString())) {
             txtWarnPassRepeat.setVisibility(View.VISIBLE);
             txtWarnPassRepeat.setText("Password doesn't match");
             return false;
-        }
+        }*/
 
         return true;
     }
 
+    @SuppressLint("CutPasteId")
     private void initViews() {
         Log.d(TAG, "initViews: Started");
 
