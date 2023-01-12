@@ -105,6 +105,12 @@ public class MainActivity extends AppCompatActivity {
             return false;
         }
 
+        if (!edtTxtPassword.getText().toString().equals(edtTxtPassRepeat.getText().toString())) {
+            txtWarnPassRepeat.setVisibility(View.VISIBLE);
+            txtWarnPassRepeat.setText("Password doesn't match");
+            return false;
+        }
+
         return true;
     }
 
