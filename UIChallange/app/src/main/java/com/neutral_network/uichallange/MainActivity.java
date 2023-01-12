@@ -14,6 +14,8 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.snackbar.Snackbar;
+
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = "MainActivity";
@@ -54,8 +56,28 @@ public class MainActivity extends AppCompatActivity {
         Log.d(TAG, "initRegister: Started");
 
         if (validateData()) {
-            //
+            if (agreementCheck.isChecked()) {
+                showSnackBar();
+            } else {
+                Toast.makeText(this, "You need to agree to the license agreement", Toast.LENGTH_SHORT).show();
+            }
         }
+    }
+
+    private void showSnackBar() {
+        Log.d(TAG, "showSnackBar: Started");
+        txtWarnName.setVisibility(View.GONE);
+        txtWarnEmail.setVisibility(View.GONE);
+        txtWarnPass.setVisibility(View.GONE);
+        txtWarnPassRepeat.setVisibility(View.GONE);
+
+        Snackbar.make(parent, "You have successfully registered", Snackbar.LENGTH_INDEFINITE)
+                .setAction("Dismiss", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        //
+                    }
+                }) .show();
     }
 
     private boolean validateData() {
