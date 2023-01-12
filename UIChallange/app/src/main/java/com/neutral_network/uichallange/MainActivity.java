@@ -5,12 +5,14 @@ import androidx.constraintlayout.widget.ConstraintLayout;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,6 +32,58 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         initViews();
+
+        // section of all set Click Listener
+
+        btnPickImage.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "Yet to talk about", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        btnRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                initRegister();
+            }
+        });
+    }
+
+    private void initRegister() {
+        Log.d(TAG, "initRegister: Started");
+
+        if (validateData()) {
+            //
+        }
+    }
+
+    private boolean validateData() {
+        if (edtTxtName.getText().toString().equals("")) {
+            txtWarnName.setVisibility(View.VISIBLE);
+            txtWarnName.setText("Enter your name");
+            return false;
+        }
+
+        if (edtTxtEmail.getText().toString().equals("")) {
+            txtWarnEmail.setVisibility(View.VISIBLE);
+            txtWarnEmail.setText("Enter your email");
+            return false;
+        }
+
+        if (txtWarnPass.getText().toString().equals("")) {
+            txtWarnPass.setVisibility(View.VISIBLE);
+            txtWarnPass.setText("Enter your password");
+            return false;
+        }
+
+        if (txtWarnPassRepeat.getText().toString().equals("")) {
+            txtWarnPassRepeat.setVisibility(View.VISIBLE);
+            txtWarnPassRepeat.setText("Re enter your password");
+            return false;
+        }
+
+        return true;
     }
 
     private void initViews() {
