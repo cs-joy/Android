@@ -11,6 +11,7 @@ import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -71,11 +72,35 @@ public class MainActivity extends AppCompatActivity {
         txtWarnPass.setVisibility(View.GONE);
         txtWarnPassRepeat.setVisibility(View.GONE);
 
-        Snackbar.make(parent, "You have successfully registered", Snackbar.LENGTH_INDEFINITE)
+        String name = edtTxtName.getText().toString();
+        String email = edtTxtName.getText().toString();
+        String country = spinnerCountry.getSelectedItem().toString();
+        String gender = "";
+        switch (rgGender.getCheckedRadioButtonId()) {
+            case R.id.rbMale:
+                gender = "Male";
+                break;
+            case R.id.rbFemale:
+                gender = "Female";
+                break;
+            case R.id.rbOther:
+                gender = "Other";
+                break;
+            default:
+                gender = "Unknown";
+                break;
+        }
+
+        String snackText = "Name: " + name + "\nEmail: " + email + "\nCountry: " + country + "\nGender: " + gender;
+
+        Snackbar.make(parent, snackText, Snackbar.LENGTH_INDEFINITE)
                 .setAction("Dismiss", new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        //
+                        edtTxtName.setText("");
+                        edtTxtEmail.setText("");
+                        edtTxtPassword.setText("");
+                        edtTxtPassRepeat.setText("");
                     }
                 }) .show();
     }
