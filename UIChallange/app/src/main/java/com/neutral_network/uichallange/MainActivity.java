@@ -93,7 +93,9 @@ public class MainActivity extends AppCompatActivity {
 
         String snackText = "Name: " + name + "\nEmail: " + email + "\nCountry: " + country + "\nGender: " + gender;
 
-        Snackbar.make(parent, snackText, Snackbar.LENGTH_INDEFINITE)
+        String user = name + " is just registered successfully";
+
+        Snackbar.make(parent, user, Snackbar.LENGTH_INDEFINITE)
                 .setAction("Dismiss", new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
