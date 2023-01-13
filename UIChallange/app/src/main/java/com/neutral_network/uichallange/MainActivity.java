@@ -122,30 +122,27 @@ public class MainActivity extends AppCompatActivity {
             return false;
         }
 
-        if (txtWarnPass.getText().toString().equals("")) {
+        if (edtTxtPassword.getText().toString().equals("")) {
             txtWarnPass.setVisibility(View.VISIBLE);
             txtWarnPass.setText("Enter your password");
             return false;
         }
 
-        if (txtWarnPassRepeat.getText().toString().equals("")) {
+        if (edtTxtPassRepeat.getText().toString().equals("")) {
             txtWarnPassRepeat.setVisibility(View.VISIBLE);
             txtWarnPassRepeat.setText("Re enter your password");
             return false;
         }
 
-        // check this logic if its works successfully
-        /*
         if (!edtTxtPassword.getText().toString().equals(edtTxtPassRepeat.getText().toString())) {
             txtWarnPassRepeat.setVisibility(View.VISIBLE);
             txtWarnPassRepeat.setText("Password doesn't match");
             return false;
-        }*/
+        }
 
         return true;
     }
 
-    @SuppressLint("CutPasteId")
     private void initViews() {
         Log.d(TAG, "initViews: Started");
 
@@ -160,7 +157,7 @@ public class MainActivity extends AppCompatActivity {
         txtWarnName = findViewById(R.id.txtWarnName);
         txtWarnEmail = findViewById(R.id.txtWarnEmail);
         txtWarnPass = findViewById(R.id.txtWarnPass);
-        txtWarnPassRepeat = findViewById(R.id.edtTxtPassRepeat);
+        txtWarnPassRepeat = findViewById(R.id.txtWarnPassRepeat);
 
         spinnerCountry = findViewById(R.id.spinnerCountry);
 
