@@ -73,7 +73,7 @@ public class MainActivity extends AppCompatActivity {
         txtWarnPassRepeat.setVisibility(View.GONE);
 
         String name = edtTxtName.getText().toString();
-        String email = edtTxtName.getText().toString();
+        String email = edtTxtEmail.getText().toString();
         String country = spinnerCountry.getSelectedItem().toString();
         String gender = "";
         switch (rgGender.getCheckedRadioButtonId()) {
@@ -94,6 +94,8 @@ public class MainActivity extends AppCompatActivity {
         String snackText = "Name: " + name + "\nEmail: " + email + "\nCountry: " + country + "\nGender: " + gender;
 
         String user = name + " is just registered successfully";
+
+        Log.d(TAG, "Snackbar Text: " + snackText);
 
         Snackbar.make(parent, user, Snackbar.LENGTH_INDEFINITE)
                 .setAction("Dismiss", new View.OnClickListener() {
