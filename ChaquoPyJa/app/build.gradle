@@ -22,14 +22,6 @@ android {
 
         python {
             buildPython "C:/Python310/python.exe"
-
-            pip {
-                install "matplotlib"
-            }
-
-            pyc {
-                src false
-            }
         }
     }
 
