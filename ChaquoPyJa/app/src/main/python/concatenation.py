@@ -2,4 +2,4 @@
 def concatenate(fname, lname):
     full_name = fname + " " + lname
 
-    return "full_name"
+    return "Hello, " + full_name

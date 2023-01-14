@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity {
         btnFullName.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                PyObject obj = module.callAttr("concatenate", edtTxtFname, edtTxtLname);
+                PyObject obj = module.callAttr("concatenate", edtTxtFname.getText().toString(), edtTxtLname.getText().toString());
                 displayGreet.setText(obj.toString());
             }
         });
