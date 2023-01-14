@@ -13,5 +13,17 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        initViews();
+    }
+
+    private void initViews() {
+        // initialize all of our button elements
+        btnAllBooks = findViewById(R.id.btnAllBooks);
+        btnCurrentlyReading = findViewById(R.id.btnCurrentlyReading);
+        btnAlreadyRead = findViewById(R.id.btnAlreadyRead);
+        btnWantToRead = findViewById(R.id.btnWantToRead);
+        btnFavorite = findViewById(R.id.btnFavorite);
+        btnAbout = findViewById(R.id.btnAbout);
     }
 }
