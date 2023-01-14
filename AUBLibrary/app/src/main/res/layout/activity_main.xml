@@ -30,7 +30,7 @@
 
     <Button
         android:id="@+id/btnAllBooks"
-        android:layout_width="200dp"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
         android:text="See All Books"
@@ -42,7 +42,7 @@
 
     <Button
         android:id="@+id/btnAbout"
-        android:layout_width="200dp"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="About"
@@ -53,19 +53,19 @@
 
     <Button
         android:id="@+id/btnCurrentlyReading"
-        android:layout_width="200dp"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="Currenty Reading Books"
+        android:backgroundTint="@color/_aub_green"
+        android:text="Currently Reading Books"
         android:textAllCaps="false"
         app:layout_constraintEnd_toEndOf="@+id/btnAllBooks"
         app:layout_constraintStart_toStartOf="@+id/btnAllBooks"
-        app:layout_constraintTop_toBottomOf="@+id/btnAllBooks"
-        android:backgroundTint="@color/_aub_green"/>
+        app:layout_constraintTop_toBottomOf="@+id/btnAllBooks" />
 
     <Button
         android:id="@+id/btnAlreadyRead"
-        android:layout_width="200dp"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Already Read Books"
@@ -77,7 +77,7 @@
 
     <Button
         android:id="@+id/btnWantToRead"
-        android:layout_width="200dp"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="Your Wishlist"
@@ -89,7 +89,7 @@
 
     <Button
         android:id="@+id/btnFavorite"
-        android:layout_width="200dp"
+        android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:text="See Your Favorites"
