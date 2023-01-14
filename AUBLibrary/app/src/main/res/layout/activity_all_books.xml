@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AllBooksActivity">
+    tools:context=".AllBooksActivity"
+    android:background="@color/_aub_green">
 
 </androidx.constraintlayout.widget.ConstraintLayout>
