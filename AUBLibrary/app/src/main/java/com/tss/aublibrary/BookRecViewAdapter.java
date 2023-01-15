@@ -55,6 +55,7 @@ public class BookRecViewAdapter extends RecyclerView.Adapter<BookRecViewAdapter.
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(mContext, BookActivity.class); // Intent intent = new Intent(sourceActivity, destinationActivity);
+                mContext.startActivity(intent);
             }
         });
 
