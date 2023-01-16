@@ -48,4 +48,26 @@ public class Utils {
             return instance;
         }
     }
+
+    // get the value or items from the list(book list)
+
+    public static ArrayList<Book> getAllBooks() {
+        return allBooks;
+    }
+
+    public static ArrayList<Book> getAlreadyReadBook() {
+        return alreadyReadBook;
+    }
+
+    public static ArrayList<Book> getWantToReadBooks() {
+        return wantToReadBooks;
+    }
+
+    public static ArrayList<Book> getCurrentlyReadingBooks() {
+        return currentlyReadingBooks;
+    }
+
+    public static ArrayList<Book> getFavoriteBooks() {
+        return favoriteBooks;
+    }
 }
