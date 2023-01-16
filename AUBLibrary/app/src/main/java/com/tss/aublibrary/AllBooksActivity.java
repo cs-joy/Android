@@ -68,6 +68,6 @@ public class AllBooksActivity extends AppCompatActivity {
 //
 
 //        adapter.setBooks(books);
-          adapter.setBooks(Utils.getAllBooks());
+          adapter.setBooks(Utils.getInstance().getAllBooks());
     }
 }
