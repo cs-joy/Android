@@ -1,5 +1,7 @@
 package com.tss.aublibrary;
 
+import static com.tss.aublibrary.BookActivity.BOOK_ID_KEY;
+
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
@@ -55,7 +57,8 @@ public class BookRecViewAdapter extends RecyclerView.Adapter<BookRecViewAdapter.
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(mContext, BookActivity.class); // Intent intent = new Intent(sourceActivity, destinationActivity);
-                intent.putExtra("bookId", books.get(position).getId());
+                // intent.putExtra("bookId", books.get(position).getId());
+                intent.putExtra(BOOK_ID_KEY, books.get(position).getId());
                 mContext.startActivity(intent);
             }
         });
