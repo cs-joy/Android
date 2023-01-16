@@ -13,9 +13,26 @@ public class Utils {
     private static ArrayList<Book> favoriteBooks;
 
     private Utils() {
+        // initialize of all list
         if (null == allBooks) {
             allBooks = new ArrayList<>();
             initData();
+        }
+
+        if (null == alreadyReadBook) {
+            alreadyReadBook = new ArrayList<>();
+        }
+
+        if (null == wantToReadBooks) {
+            wantToReadBooks = new ArrayList<>();
+        }
+
+        if (null == currentlyReadingBooks) {
+            currentlyReadingBooks = new ArrayList<>();
+        }
+
+        if (null == favoriteBooks) {
+            favoriteBooks = new ArrayList<>();
         }
     }
 
