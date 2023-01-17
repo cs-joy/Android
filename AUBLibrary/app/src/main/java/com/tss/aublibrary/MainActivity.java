@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // navigate the user to the new activity(AlreadyReadBookActivity)
-                Intent intent = new Intent(MainActivity.this, AllBooksActivity.class);
+                Intent intent = new Intent(MainActivity.this, AlreadyReadBookActivity.class);
                 // start the activity
                 startActivity(intent);
             }
