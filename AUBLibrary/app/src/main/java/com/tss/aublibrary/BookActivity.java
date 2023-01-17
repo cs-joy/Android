@@ -5,11 +5,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+
+import java.util.ArrayList;
 
 public class BookActivity extends AppCompatActivity {
 
@@ -48,10 +52,43 @@ public class BookActivity extends AppCompatActivity {
                 // make sure to check the bookId is not null
                 if (null != incomingBook) { // if not null
                     setData(incomingBook);
+
+                    handleAlreadyRead(incomingBook);
                 }
             }
         }
 
+    }
+
+    private void handleAlreadyRead(Book incoming_book) {
+        ArrayList<Book> alreadyReadBooks = Utils.getInstance().getAlreadyReadBook();
+
+        boolean existInAlreadyReadBooks = false;
+
+        for (Book b: alreadyReadBooks) {
+            if (b.getId() == incoming_book.getId()) {
+                existInAlreadyReadBooks = true;
+            }
+        }
+
+        if (existInAlreadyReadBooks) {
+            // disable the button `btnAddAlreadyRead`
+            btnAddAlreadyRead.setEnabled(false);
+        } else {
+            btnAddAlreadyRead.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // check point
+                    if (Utils.getInstance().addToAlreadyReadBook(incoming_book)) {
+                        Toast.makeText(BookActivity.this, "Book Added", Toast.LENGTH_SHORT).show();
+
+                        // TODO: navigate the user
+                    } else {
+                        Toast.makeText(BookActivity.this, "Something wrong happened, Try again", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+        }
     }
 
     private void setData(Book book) {
