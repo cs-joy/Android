@@ -60,6 +60,11 @@ public class BookActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Enable and disable the button
+     * Add the book to AlreadyReadBook arraylist
+     * @param incoming_book
+     */
     private void handleAlreadyRead(Book incoming_book) {
         ArrayList<Book> alreadyReadBooks = Utils.getInstance().getAlreadyReadBook();
 
