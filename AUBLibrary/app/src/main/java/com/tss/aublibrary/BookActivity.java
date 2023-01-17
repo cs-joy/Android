@@ -87,7 +87,9 @@ public class BookActivity extends AppCompatActivity {
                     if (Utils.getInstance().addToAlreadyReadBook(incoming_book)) {
                         Toast.makeText(BookActivity.this, "Book Added", Toast.LENGTH_SHORT).show();
 
-                        // TODO: navigate the user
+                        // navigate the user
+                        Intent intent = new Intent(BookActivity.this, AllBooksActivity.class);
+                        startActivity(intent);
                     } else {
                         Toast.makeText(BookActivity.this, "Something wrong happened, Try again", Toast.LENGTH_SHORT).show();
                     }

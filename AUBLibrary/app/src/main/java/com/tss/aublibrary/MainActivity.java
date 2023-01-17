@@ -29,6 +29,18 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        btnAlreadyRead.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // navigate the user to the new activity(AlreadyReadBookActivity)
+                Intent intent = new Intent(MainActivity.this, AllBooksActivity.class);
+                // start the activity
+                startActivity(intent);
+            }
+        });
+
+        Utils.getInstance();
     }
 
     private void initViews() {
