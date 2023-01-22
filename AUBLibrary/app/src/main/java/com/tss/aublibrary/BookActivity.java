@@ -63,6 +63,77 @@ public class BookActivity extends AppCompatActivity {
 
     }
 
+    private void handleFavoriteBooks(Book incomingBook) {
+        ArrayList<Book> favoriteBooks = Utils.getInstance().getWantToReadBooks();
+
+        boolean existInFavoriteBooks = false;
+
+        for (Book b: favoriteBooks) {
+            if (b.getId() == incomingBook.getId()) {
+                existInFavoriteBooks = true;
+            }
+        }
+
+        if (existInFavoriteBooks) {
+            // disable the button `btnAddToFavorite`
+            btnAddToFavorite.setEnabled(false);
+        } else {
+            btnAddToFavorite.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // check point
+                    if (Utils.getInstance().addToFavorite(incomingBook)) {
+                        Toast.makeText(BookActivity.this, "Book Added", Toast.LENGTH_SHORT).show();
+
+                        // navigate the user
+                        Intent intent = new Intent(BookActivity.this, FavoriteActivity.class);
+                        startActivity(intent);
+                    } else {
+                        Toast.makeText(BookActivity.this, "Something wrong happened, Try again", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+        }
+    }
+
+    handleCurrentlyReadingBooks(Book incomingBook) {
+        ArrayList<Book> wantToReadBooks = Utils.getInstance().getWantToReadBooks();
+
+        boolean existInWantToReadBooks = false;
+
+        for (Book b: wantToReadBooks) {
+            if (b.getId() == incomingBook.getId()) {
+                existInWantToReadBooks = true;
+            }
+        }
+
+        if (existInWantToReadBooks) {
+            // disable the button `btnAddWantToRead`
+            btnAddWantToRead.setEnabled(false);
+        } else {
+            btnAddWantToRead.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // check point
+                    if (Utils.getInstance().addWantToReadBook(incomingBook)) {
+                        Toast.makeText(BookActivity.this, "Book Added", Toast.LENGTH_SHORT).show();
+
+                        // navigate the user
+                        Intent intent = new Intent(BookActivity.this, WantToReadActivity.class);
+                        startActivity(intent);
+                    } else {
+                        Toast.makeText(BookActivity.this, "Something wrong happened, Try again", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+        }
+    }
+
+    /**
+     * Enable and disable the button
+     * Add the book to incomingBook arraylist
+     * @param incomingBook
+     */
     private void handleWantToReadBooks(Book incomingBook) {
         ArrayList<Book> wantToReadBooks = Utils.getInstance().getWantToReadBooks();
 

@@ -91,4 +91,8 @@ public class Utils {
     public boolean addWantToReadBook(Book book) {
         return wantToReadBooks.add(book);
     }
+
+    public boolean addToFavorite(Book book) {
+        return favoriteBooks.add(book);
+    }
 }
