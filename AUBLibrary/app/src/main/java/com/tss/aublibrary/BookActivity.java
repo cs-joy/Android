@@ -63,6 +63,11 @@ public class BookActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * Enable and disable the button
+     * Add the book to favoriteBooks arraylist
+     * @param incomingBook
+     */
     private void handleFavoriteBooks(Book incomingBook) {
         ArrayList<Book> favoriteBooks = Utils.getInstance().getFavoriteBooks();
 
@@ -96,6 +101,11 @@ public class BookActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Enable and disable the button
+     * Add the book to currentlyReadingBooks arraylist
+     * @param incomingBook
+     */
     private void handleCurrentlyReadingBooks(Book incomingBook) {
         ArrayList<Book> currentlyReadingBooks = Utils.getInstance().getCurrentlyReadingBooks();
 
@@ -131,7 +141,7 @@ public class BookActivity extends AppCompatActivity {
 
     /**
      * Enable and disable the button
-     * Add the book to incomingBook arraylist
+     * Add the book to wantToReadBooks arraylist
      * @param incomingBook
      */
     private void handleWantToReadBooks(Book incomingBook) {
@@ -169,7 +179,7 @@ public class BookActivity extends AppCompatActivity {
 
     /**
      * Enable and disable the button
-     * Add the book to AlreadyReadBook arraylist
+     * Add the book to alreadyReadBooks arraylist
      * @param incoming_book
      */
     private void handleAlreadyRead(Book incoming_book) {
