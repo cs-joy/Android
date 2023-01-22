@@ -6,23 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/txtV"
+    <ImageView
+        android:id="@+id/imgVO"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="95dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
 
     <Button
-        android:id="@+id/btnC"
+        android:id="@+id/btnDetect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Click"
+        android:layout_marginBottom="76dp"
+        android:text="Detect"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/txtV"
-        app:layout_constraintStart_toStartOf="@+id/txtV"
-        android:layout_marginBottom="100dp"/>
+        app:layout_constraintEnd_toEndOf="@+id/imgVO"
+        app:layout_constraintStart_toStartOf="@+id/imgVO"
+        app:layout_constraintTop_toBottomOf="@+id/imgVO" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
