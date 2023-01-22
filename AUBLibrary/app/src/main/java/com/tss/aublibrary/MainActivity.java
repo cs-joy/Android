@@ -30,12 +30,46 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnCurrentlyReading.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // write here logic to navigate the user
+                Intent intent = new Intent(MainActivity.this, CurrentlyReadingBookActivity.class); // Intent intent = new Intent(sourceActivity, destinationActivity);
+
+                // inner method
+                startActivity(intent);
+            }
+        });
+
+        // click listener for tbnAlreadyRead
         btnAlreadyRead.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // navigate the user to the new activity(AlreadyReadBookActivity)
                 Intent intent = new Intent(MainActivity.this, AlreadyReadBookActivity.class);
                 // start the activity
+                startActivity(intent);
+            }
+        });
+
+        btnWantToRead.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // write here logic to navigate the user
+                Intent intent = new Intent(MainActivity.this, WantToReadActivity.class); // Intent intent = new Intent(sourceActivity, destinationActivity);
+
+                // inner method
+                startActivity(intent);
+            }
+        });
+
+        btnFavorite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // write here logic to navigate the user
+                Intent intent = new Intent(MainActivity.this, FavoriteActivity.class); // Intent intent = new Intent(sourceActivity, destinationActivity);
+
+                // inner method
                 startActivity(intent);
             }
         });
