@@ -54,10 +54,46 @@ public class BookActivity extends AppCompatActivity {
                     setData(incomingBook);
 
                     handleAlreadyRead(incomingBook);
+                    handleWantToReadBooks(incomingBook);
+                    handleCurrentlyReadingBooks(incomingBook);
+                    handleFavoriteBooks(incomingBook);
                 }
             }
         }
 
+    }
+
+    private void handleWantToReadBooks(Book incomingBook) {
+        ArrayList<Book> wantToReadBooks = Utils.getInstance().getWantToReadBooks();
+
+        boolean existInWantToReadBooks = false;
+
+        for (Book b: wantToReadBooks) {
+            if (b.getId() == incomingBook.getId()) {
+                existInWantToReadBooks = true;
+            }
+        }
+
+        if (existInWantToReadBooks) {
+            // disable the button `btnAddWantToRead`
+            btnAddWantToRead.setEnabled(false);
+        } else {
+            btnAddWantToRead.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    // check point
+                    if (Utils.getInstance().addWantToReadBook(incomingBook)) {
+                        Toast.makeText(BookActivity.this, "Book Added", Toast.LENGTH_SHORT).show();
+
+                        // navigate the user
+                        Intent intent = new Intent(BookActivity.this, WantToReadActivity.class);
+                        startActivity(intent);
+                    } else {
+                        Toast.makeText(BookActivity.this, "Something wrong happened, Try again", Toast.LENGTH_SHORT).show();
+                    }
+                }
+            });
+        }
     }
 
     /**
