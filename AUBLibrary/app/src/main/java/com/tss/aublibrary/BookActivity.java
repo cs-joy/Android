@@ -88,7 +88,7 @@ public class BookActivity extends AppCompatActivity {
                 public void onClick(View v) {
                     // check point
                     if (Utils.getInstance().addToFavorite(incomingBook)) {
-                        Toast.makeText(BookActivity.this, "Book Added", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(BookActivity.this, "Book Added To Favorite List", Toast.LENGTH_SHORT).show();
 
                         // navigate the user
                         Intent intent = new Intent(BookActivity.this, FavoriteActivity.class);
@@ -126,7 +126,7 @@ public class BookActivity extends AppCompatActivity {
                 public void onClick(View v) {
                     // check point
                     if (Utils.getInstance().addCurrentlyReading(incomingBook)) {
-                        Toast.makeText(BookActivity.this, "Book Added", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(BookActivity.this, "Book Added To Currently Reading List", Toast.LENGTH_SHORT).show();
 
                         // navigate the user
                         Intent intent = new Intent(BookActivity.this, CurrentlyReadingBookActivity.class);
@@ -164,7 +164,7 @@ public class BookActivity extends AppCompatActivity {
                 public void onClick(View v) {
                     // check point
                     if (Utils.getInstance().addWantToReadBook(incomingBook)) {
-                        Toast.makeText(BookActivity.this, "Book Added", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(BookActivity.this, "Book Added To Watchlist", Toast.LENGTH_SHORT).show();
 
                         // navigate the user
                         Intent intent = new Intent(BookActivity.this, WantToReadActivity.class);
@@ -202,7 +202,7 @@ public class BookActivity extends AppCompatActivity {
                 public void onClick(View v) {
                     // check point
                     if (Utils.getInstance().addToAlreadyReadBook(incoming_book)) {
-                        Toast.makeText(BookActivity.this, "Book Added", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(BookActivity.this, "Book Added To Already Read Book List", Toast.LENGTH_SHORT).show();
 
                         // navigate the user
                         Intent intent = new Intent(BookActivity.this, AlreadyReadBookActivity.class);
