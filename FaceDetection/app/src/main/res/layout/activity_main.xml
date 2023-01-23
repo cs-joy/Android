@@ -8,9 +8,9 @@
 
     <ImageView
         android:id="@+id/imgVO"
-        android:layout_width="279dp"
+        android:layout_width="369dp"
         android:layout_height="416dp"
-        android:src="@drawable/friends"
+        android:src="@drawable/twoangrycolleagues"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
