@@ -19,8 +19,13 @@ android {
         }
 
         python {
-            version "3.10"
             buildPython "C:/Python310/python.exe"
+
+            pip {
+                install "opencv-contrib-python-headless"
+                install "pillow"
+                install "numpy"
+            }
         }
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
