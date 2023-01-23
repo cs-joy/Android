@@ -1,13 +1,13 @@
 import numpy as np
 import cv2
-import PLI from Image
+from PIL import Image
 import base64
 import io
 import face_recognition
 
 def main(data):
     decoded_data = base64.b64decode(data)
-    np_data = np.fromString(decoded_data, np.uint8)
+    np_data = np.fromstring(decoded_data, np.uint8)
     img = cv2.imdecode(np_data, cv2.IMREAD_UNCHANGED)
     img_rgb = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     img_gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
