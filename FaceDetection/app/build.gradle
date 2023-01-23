@@ -23,6 +23,7 @@ android {
                 install "opencv-contrib-python-headless"
                 install "pillow"
                 install "numpy"
+                install "face_recognition"
             }
             buildPython "C:/Python310/python.exe"
         }
