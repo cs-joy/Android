@@ -82,12 +82,31 @@ public class MainActivity extends AppCompatActivity {
                         catch (IOException e) {
                             e.printStackTrace();
                         }
-                        imageView.setImageBitmap(
+                        IVPreviewImage.setImageBitmap(
                                 selectedImageBitmap);
                     }
                 }
             });
 
+    // this function is triggered when user
+    // selects the image from the imageChooser
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (resultCode == RESULT_OK) {
+
+            // compare the resultCode with the
+            // SELECT_PICTURE constant
+            if (requestCode == SELECT_PICTURE) {
+                // Get the url of the image from data
+                Uri selectedImageUri = data.getData();
+                if (null != selectedImageUri) {
+                    // update the preview image in the layout
+                    IVPreviewImage.setImageURI(selectedImageUri);
+                }
+            }
+        }
+    }
 }
 
 
