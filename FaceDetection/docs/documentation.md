@@ -5,7 +5,7 @@
   - #### Install 
     - Python on your OS (python v3.10) and Add it in your PATH(Environment Variable)
     - Java SDK (java sdk v11) and Add it in your PATH(Environment Variable)
-    - Android Studio
+    - Android Studio (Electric Eel 2022.1.1)
 
   - #### Create Project
     - Create as an Empty Activity project
