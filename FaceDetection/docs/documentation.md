@@ -25,3 +25,31 @@
           id 'com.chaquo.python'
       }
       ```
+    - ABI selection
+      ```
+        defaultConfig {
+          ndk {
+            abiFilters "armeabi-v7a", "arm64-v8a", "x86", "x86_64"
+          }
+        }
+      ```
+    - buildPython
+      ```
+      defaultConfig {
+          python {
+              buildPython "C:/path/to/python.exe"
+          }
+      }
+      ```
+    - Source code
+      - By default, Chaquopy will look for Python source code in the python subdirectory of each source set. For example, the Python code for the main source set should go in src/main/python. To include Python source code from other directories, use the android.sourceSets block. For example:
+      ```
+      android {
+          sourceSets {
+              main {
+                  python.srcDir "some/other/dir"
+              }
+          }
+      }
+      ```
+    - 
