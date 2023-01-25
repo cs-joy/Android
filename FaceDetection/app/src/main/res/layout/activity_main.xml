@@ -4,25 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText">
+
+
+    <Button
+        android:id="@+id/BSelectImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Upload Image"
+        android:layout_marginTop="100dp"/>
 
     <ImageView
-        android:id="@+id/imgVO"
-        android:layout_width="369dp"
-        android:layout_height="416dp"
-        android:src="@drawable/twoangrycolleagues"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_centerHorizontal="true"/>
+        android:id="@+id/IVPreviewImage"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/BSelectImage"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="16dp" />
+
 
     <Button
         android:id="@+id/btnDetect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="76dp"
+        android:layout_marginTop="77dp"
         android:text="Detect"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/imgVO"/>
+        android:layout_below="@id/IVPreviewImage"/>
 
 </RelativeLayout>
