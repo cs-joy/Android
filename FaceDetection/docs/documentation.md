@@ -78,3 +78,58 @@
     - 
 #### Android Studio plugin
 To add Python editing suppport to the Android Studio user interface, you may optionally install the “Python Community Edition” plugin. However, Chaquopy isn’t integrated with this plugin, so you’ll see the warning “No Python interpreter configured for the module”, and your code will probably display many error indicators such as “Unresolved reference” and “No module named”. These are harmless: just go ahead and run your app, and if there really is an error, the details will be displayed in the Logcat.
+
+
+
+
+
+
+
+
+
+
+
+
+### UI Design
+Open `activity.xml` file, located at `src > main > res > layout > activity.xml`. After that copy the following code and paste into your `activity.xml` file
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="HardcodedText">
+
+
+    <Button
+        android:id="@+id/BSelectImage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Upload Image"
+        android:layout_marginTop="100dp"/>
+
+    <ImageView
+        android:id="@+id/IVPreviewImage"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/BSelectImage"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="16dp" />
+
+
+    <Button
+        android:id="@+id/btnDetect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="77dp"
+        android:text="Detect"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/IVPreviewImage"/>
+
+</RelativeLayout>
+```
