@@ -18,7 +18,7 @@ public class WantToReadActivity extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.booksRecView);
 
         // create adapter
-        BookRecViewAdapter bookRecViewAdapter = new BookRecViewAdapter(this);
+        BookRecViewAdapter bookRecViewAdapter = new BookRecViewAdapter(this, "wantToReadBooks");
 
         // set adapter
         recyclerView.setAdapter(bookRecViewAdapter);

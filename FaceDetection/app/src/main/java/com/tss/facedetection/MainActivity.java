@@ -145,7 +145,7 @@ public class MainActivity extends AppCompatActivity {
             // SELECT_PICTURE constant
             if (requestCode == SELECT_PICTURE) {
                 // Get the url of the image from data
-                Uri selectedImageUri = data.getData();
+                Uri selectedImageUri = data.getData(); // TODO: maybe Uri need to be removed from this statement
                 if (null != selectedImageUri) {
                     // update the preview image in the layout
                     IVPreviewImage.setImageURI(selectedImageUri);
