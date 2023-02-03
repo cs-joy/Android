@@ -1,7 +1,9 @@
 package com.tss.aublibrary;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -71,6 +73,35 @@ public class MainActivity extends AppCompatActivity {
 
                 // inner method
                 startActivity(intent);
+            }
+        });
+
+        btnAbout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //
+                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+                builder.setTitle(getString(R.string.app_name));
+                builder.setMessage("Designed and Developed with Love by Zahangir at sharpsolution.org\n"
+                + "Check my website for more awesome applications:");
+                builder.setNegativeButton("Dismiss", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //
+                    }
+                });
+
+                builder.setPositiveButton("Visit", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        //TODO: Show the website
+                        Intent intent = new Intent(MainActivity.this, WebsiteActivity.class);
+                        startActivity(intent);
+                    }
+                });
+                // here we can use multiple functionalities of builder
+                ////////////////////////////////////////////////
+                builder.create().show();
             }
         });
 
