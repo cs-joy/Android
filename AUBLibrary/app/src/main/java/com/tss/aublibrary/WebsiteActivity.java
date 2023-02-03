@@ -16,7 +16,7 @@ public class WebsiteActivity extends AppCompatActivity {
         setContentView(R.layout.activity_website);
 
         webView = findViewById(R.id.webView);
-        webView.loadUrl("https://cs-joy.com");
-        //webView.setWebViewClient(new WebViewClient());
+        webView.loadUrl("https://cs-joy.me");
+        webView.setWebViewClient(new WebViewClient());
     }
 }
