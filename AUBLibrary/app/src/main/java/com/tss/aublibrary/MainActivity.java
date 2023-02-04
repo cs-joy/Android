@@ -94,8 +94,8 @@ public class MainActivity extends AppCompatActivity {
                 builder.setPositiveButton("Visit", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        //TODO: Show the website
                         Intent intent = new Intent(MainActivity.this, WebsiteActivity.class);
+                        intent.putExtra("url", "https://google.com/");
                         startActivity(intent);
                     }
                 });
