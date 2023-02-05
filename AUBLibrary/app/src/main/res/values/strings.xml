@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">AUB Library</string>
+    <string name="activity_all_books">All Books</string>
+    <string name="activity_book">Book Details</string>
+    <string name="activity_already_read">Books You Already Read</string>
+    <string name="activity_favorite_books">Favorite Books</string>
+    <string name="activity_want_to_read">Your Wish List</string>
+    <string name="activity_currently_reading">Books You Are Currently Reading</string>
 </resources>
