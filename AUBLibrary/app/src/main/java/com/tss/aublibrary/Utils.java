@@ -1,10 +1,14 @@
 package com.tss.aublibrary;
 
+import android.content.Context;
+import android.content.SharedPreferences;
+
 import java.util.ArrayList;
 
 public class Utils {
 
     private static Utils instance;
+    private SharedPreferences sharedPreferences;
 
     private static ArrayList<Book> allBooks;
     private static ArrayList<Book> alreadyReadBook;
@@ -12,7 +16,11 @@ public class Utils {
     private static ArrayList<Book> currentlyReadingBooks;
     private static ArrayList<Book> favoriteBooks;
 
-    private Utils() {
+    private Utils(Context context) {
+        // instance of our sharedPreferences
+        sharedPreferences = context.getSharedPreferences("alternative_db", Context.MODE_PRIVATE);
+        // now we can put data into our sharedPreferences and get the existing data from this sharedPreferences.
+
         // initialize of all list
         if (null == allBooks) {
             allBooks = new ArrayList<>();
