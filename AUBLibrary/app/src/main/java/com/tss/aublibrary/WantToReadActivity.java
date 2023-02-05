@@ -27,7 +27,7 @@ public class WantToReadActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         // set data
-        bookRecViewAdapter.setBooks(Utils.getWantToReadBooks());
+        bookRecViewAdapter.setBooks(Utils.getInstance(this).getWantToReadBooks());
     }
 
     @Override
