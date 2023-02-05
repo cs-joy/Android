@@ -27,7 +27,7 @@ public class FavoriteActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         // set data
-        bookRecViewAdapter.setBooks(Utils.getFavoriteBooks());
+        bookRecViewAdapter.setBooks(Utils.getInstance(this).getFavoriteBooks());
     }
 
     @Override
