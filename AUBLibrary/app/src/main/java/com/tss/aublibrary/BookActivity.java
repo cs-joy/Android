@@ -48,7 +48,7 @@ public class BookActivity extends AppCompatActivity {
             int bookId = intent.getIntExtra(BOOK_ID_KEY, -1);
 
             if (bookId != -1) {
-                Book incomingBook = Utils.getInstance().getBookById(bookId);
+                Book incomingBook = Utils.getInstance(this).getBookById(bookId);
                 // make sure to check the bookId is not null
                 if (null != incomingBook) { // if not null
                     setData(incomingBook);
@@ -69,7 +69,7 @@ public class BookActivity extends AppCompatActivity {
      * @param incomingBook
      */
     private void handleFavoriteBooks(Book incomingBook) {
-        ArrayList<Book> favoriteBooks = Utils.getInstance().getFavoriteBooks();
+        ArrayList<Book> favoriteBooks = Utils.getInstance(this).getFavoriteBooks();
 
         boolean existInFavoriteBooks = false;
 
@@ -87,7 +87,7 @@ public class BookActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     // check point
-                    if (Utils.getInstance().addToFavorite(incomingBook)) {
+                    if (Utils.getInstance(BookActivity.this).addToFavorite(incomingBook)) {
                         Toast.makeText(BookActivity.this, "Book Added To Favorite List", Toast.LENGTH_SHORT).show();
 
                         // navigate the user
@@ -107,7 +107,7 @@ public class BookActivity extends AppCompatActivity {
      * @param incomingBook
      */
     private void handleCurrentlyReadingBooks(Book incomingBook) {
-        ArrayList<Book> currentlyReadingBooks = Utils.getInstance().getCurrentlyReadingBooks();
+        ArrayList<Book> currentlyReadingBooks = Utils.getInstance(this).getCurrentlyReadingBooks();
 
         boolean existInCurrentlyReadingBooks = false;
 
@@ -125,7 +125,7 @@ public class BookActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     // check point
-                    if (Utils.getInstance().addCurrentlyReading(incomingBook)) {
+                    if (Utils.getInstance(BookActivity.this).addCurrentlyReading(incomingBook)) {
                         Toast.makeText(BookActivity.this, "Book Added To Currently Reading List", Toast.LENGTH_SHORT).show();
 
                         // navigate the user
@@ -145,7 +145,7 @@ public class BookActivity extends AppCompatActivity {
      * @param incomingBook
      */
     private void handleWantToReadBooks(Book incomingBook) {
-        ArrayList<Book> wantToReadBooks = Utils.getInstance().getWantToReadBooks();
+        ArrayList<Book> wantToReadBooks = Utils.getInstance(this).getWantToReadBooks();
 
         boolean existInWantToReadBooks = false;
 
@@ -163,7 +163,7 @@ public class BookActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     // check point
-                    if (Utils.getInstance().addWantToReadBook(incomingBook)) {
+                    if (Utils.getInstance(BookActivity.this).addWantToReadBook(incomingBook)) {
                         Toast.makeText(BookActivity.this, "Book Added To Watchlist", Toast.LENGTH_SHORT).show();
 
                         // navigate the user
@@ -183,7 +183,7 @@ public class BookActivity extends AppCompatActivity {
      * @param incoming_book
      */
     private void handleAlreadyRead(Book incoming_book) {
-        ArrayList<Book> alreadyReadBooks = Utils.getInstance().getAlreadyReadBook();
+        ArrayList<Book> alreadyReadBooks = Utils.getInstance(this).getAlreadyReadBook();
 
         boolean existInAlreadyReadBooks = false;
 
@@ -201,7 +201,7 @@ public class BookActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     // check point
-                    if (Utils.getInstance().addToAlreadyReadBook(incoming_book)) {
+                    if (Utils.getInstance(BookActivity.this).addToAlreadyReadBook(incoming_book)) {
                         Toast.makeText(BookActivity.this, "Book Added To Already Read Book List", Toast.LENGTH_SHORT).show();
 
                         // navigate the user
