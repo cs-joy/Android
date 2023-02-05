@@ -20,11 +20,11 @@ public class Utils {
     private static Utils instance;
     private SharedPreferences sharedPreferences;
 
-    private static ArrayList<Book> allBooks;
-    private static ArrayList<Book> alreadyReadBook;
-    private static ArrayList<Book> wantToReadBooks;
-    private static ArrayList<Book> currentlyReadingBooks;
-    private static ArrayList<Book> favoriteBooks;
+//    private static ArrayList<Book> allBooks;
+//    private static ArrayList<Book> alreadyReadBook;
+//    private static ArrayList<Book> wantToReadBooks;
+//    private static ArrayList<Book> currentlyReadingBooks;
+//    private static ArrayList<Book> favoriteBooks;
 
     private Utils(Context context) {
         // instance of our sharedPreferences
@@ -262,18 +262,98 @@ public class Utils {
     }
 
     public boolean removeFromAlreadyRead(Book book) {
-        return alreadyReadBook.remove(book);
+        ArrayList<Book> books = getAlreadyReadBook();
+        if (null != books) {
+            // if (books.remove(book)) {} // we can't write this way to remove that book from the books array list because of inside of books arrayList and coming book aren't both same with there reference
+            // that is why we use for each loop to maintain that
+            for (Book b: books) {
+                if (b.getId() == book.getId()) {
+                    if (books.remove(b)) {
+                        // if successfully remove that book from books sharedPreferences then we should have need to update that sharedPreference as well, so to do that
+                        Gson gson = new Gson();
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.remove(ALREADY_READ_BOOKS);
+                        editor.putString(ALREADY_READ_BOOKS, gson.toJson(books));
+                        editor.commit();
+
+                        return true;
+                    }
+                }
+            }
+        }
+
+        return false;
     }
 
     public boolean removeFromWantToRead(Book book) {
-        return wantToReadBooks.remove(book);
+        ArrayList<Book> books = getWantToReadBooks();
+        if (null != books) {
+            // if (books.remove(book)) {} // we can't write this way to remove that book from the books array list because of inside of books arrayList and coming book aren't both same with there reference
+            // that is why we use for each loop to maintain that
+            for (Book b: books) {
+                if (b.getId() == book.getId()) {
+                    if (books.remove(b)) {
+                        // if successfully remove that book from books sharedPreferences then we should have need to update that sharedPreference as well, so to do that
+                        Gson gson = new Gson();
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.remove(WANT_TO_READ_BOOKS);
+                        editor.putString(WANT_TO_READ_BOOKS, gson.toJson(books));
+                        editor.commit();
+
+                        return true;
+                    }
+                }
+            }
+        }
+
+        return false;
     }
 
     public boolean removeFromCurrentlyReading(Book book) {
-        return currentlyReadingBooks.remove(book);
+        ArrayList<Book> books = getCurrentlyReadingBooks();
+        if (null != books) {
+            // if (books.remove(book)) {} // we can't write this way to remove that book from the books array list because of inside of books arrayList and coming book aren't both same with there reference
+            // that is why we use for each loop to maintain that
+            for (Book b: books) {
+                if (b.getId() == book.getId()) {
+                    if (books.remove(b)) {
+                        // if successfully remove that book from books sharedPreferences then we should have need to update that sharedPreference as well, so to do that
+                        Gson gson = new Gson();
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.remove(CURRENTLY_READING_BOOKS);
+                        editor.putString(CURRENTLY_READING_BOOKS, gson.toJson(books));
+                        editor.commit();
+
+                        return true;
+                    }
+                }
+            }
+        }
+
+        return false;
     }
 
     public boolean removeFromFavourite(Book book) {
-        return favoriteBooks.remove(book);
+        ArrayList<Book> books = getFavoriteBooks();
+        if (null != books) {
+            // if (books.remove(book)) {} // we can't write this way to remove that book from the books array list because of inside of books arrayList and coming book aren't both same with there reference
+            // that is why we use for each loop to maintain that
+            for (Book b: books) {
+                if (b.getId() == book.getId()) {
+                    if (books.remove(b)) {
+                        // if successfully remove that book from books sharedPreferences then we should have need to update that sharedPreference as well, so to do that
+                        Gson gson = new Gson();
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.remove(FAVORITE_BOOKS);
+                        editor.putString(FAVORITE_BOOKS, gson.toJson(books));
+                        editor.commit();
+
+                        return true;
+                    }
+                }
+            }
+        }
+
+        return false;
     }
 }
