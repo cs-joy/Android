@@ -51,11 +51,11 @@ public class Utils {
         allBooks.add(new Book(2, "Art Of Computer Programming", "Donal Ervin Knuth", 881, "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/ArtOfComputerProgramming.svg/1200px-ArtOfComputerProgramming.svg.png", "Computer Science Book", "The Art of Computer Programming (TAOCP) is a comprehensive monograph written by the computer scientist Donald Knuth presenting programming algorithms and their analysis. "));
     }
 
-    public static Utils getInstance() {
+    public static Utils getInstance(Context context) {
         if (null != instance) {
             return instance;
         } else {
-            instance = new Utils();
+            instance = new Utils(context);
             return instance;
         }
     }
