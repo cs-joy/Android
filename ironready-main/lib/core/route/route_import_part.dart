@@ -1,0 +1,44 @@
+import 'dart:ui';
+
+import 'package:flutter/material.dart';
+import 'package:iron_ready/presentation/auth/forgot%20password/components/forgot%20otp/view/forgot_otp.dart';
+import 'package:iron_ready/presentation/auth/forgot%20password/components/reset%20password/view/reset_password_screen.dart';
+import 'package:iron_ready/presentation/auth/forgot%20password/view/forgot_password_screen.dart';
+import 'package:iron_ready/presentation/auth/signin/view/signin_screen.dart';
+import 'package:iron_ready/presentation/auth/signup/view/signup_screen.dart';
+import 'package:iron_ready/presentation/edit%20profile/view/edit_profile_screen.dart';
+import 'package:iron_ready/presentation/home/view/home_screen.dart';
+import 'package:iron_ready/presentation/information/components/establish%20strength%20level/view/strength_level_screen.dart';
+import 'package:iron_ready/presentation/information/components/information%20selection/view/information_selection_screen.dart';
+import 'package:iron_ready/presentation/information/components/share%20information/view/share_information_screen.dart';
+import 'package:iron_ready/presentation/information/view/information_screen.dart';
+import 'package:iron_ready/presentation/layout/view/main_layout.dart';
+import 'package:iron_ready/presentation/loading%20page/view/loading_screen.dart';
+import 'package:iron_ready/presentation/notification/view/notification_screen.dart';
+import 'package:iron_ready/presentation/profile/view/profile_screen.dart';
+import 'package:iron_ready/presentation/recovery%20home/view/recovery_home_screen.dart';
+import 'package:iron_ready/presentation/recovery/view/recovery_screen.dart';
+import 'package:iron_ready/presentation/splash/view/splash_screen.dart';
+import 'package:iron_ready/presentation/subscription/components/card%20details/view/card_details_screen.dart';
+import 'package:iron_ready/presentation/subscription/components/confirmation/view/confirmation_screen.dart';
+import 'package:iron_ready/presentation/subscription/components/free%20trial%20subscription/view/free_trial_subscription_screen.dart';
+import 'package:iron_ready/presentation/subscription/components/manage%20subscription/view/manage_subscription_screen.dart';
+import 'package:iron_ready/presentation/subscription/subscription%20success/view/subscription_success_screen.dart';
+import 'package:iron_ready/presentation/subscription/view/subscription_screen.dart';
+import 'package:iron_ready/presentation/training/components/decline%20bench%20press/view/decline_bench_press_screen.dart';
+import 'package:iron_ready/presentation/training/components/flat%20bench%20press/view/flat_bench_press_screen.dart';
+import 'package:iron_ready/presentation/training/components/incline%20bench%20press/view/incline_bench_press_screen.dart';
+import 'package:iron_ready/presentation/training/components/ready%20warmup/view/ready_warmup_screen.dart';
+import 'package:iron_ready/presentation/training/components/reset%20and%20recover%20flat/view/reset_and_recover_flat_screen.dart';
+import 'package:iron_ready/presentation/training/components/reset%20and%20recover%20incline/view/reset_recover_incline_screen.dart';
+import 'package:iron_ready/presentation/training/components/warmup%20counter/view/warmup_counter_screen.dart';
+import 'package:iron_ready/presentation/training/components/warmup%20done/view/warmup_done_screen.dart';
+import 'package:iron_ready/presentation/training/components/exercise%20completed/view/exercise_completed_screen.dart';
+import 'package:iron_ready/presentation/training/components/workout%20complete/view/workout_complete_screen.dart';
+import 'package:iron_ready/presentation/training/view/training_screen.dart';
+import 'package:iron_ready/presentation/workout%20plan/view/workout_plan_screen.dart';
+
+import '../resource/app_strings.dart';
+import 'route_name.dart';
+
+part 'route_manager.dart';

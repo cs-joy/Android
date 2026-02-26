@@ -1,0 +1,43 @@
+class RouteName {
+  static const String loadingScreenRoute = "/";
+  static const String splashRoute = "/splash";
+  static const String splashTwoRoute = "/splashtwo";
+  static const String splashThreeRoute= "/splashthree";
+  static const String signinScreenRoute= "/signin";
+  static const String signupScreenRoute= "/signup";
+  static const String forgotPasswordScreen= "/forgotpassword";
+  static const String forgotOtpRoute= "/forgototp";
+  static const String resetPasswordScreenRoute= "/resetpassword";
+  static const String informationScreenRoute= "/information";
+  static const String informationSelectionScreenRoute= "/informationSelection";
+  static const String shareInformationScreenRoute= "/shareInformation";
+  static const String strengthLevelScreenRoute= "/strengthLevel";
+  static const String subscriptionScreenRoute= "/subscription";
+  static const String confirmationScreenRoute= "/confirmation";
+  static const String cardDetailsScreenRoute= "/addcard";
+  static const String subscriptionSuccessScreenRoute= "/subsSucccess";
+  static const String homeScreenRoute= "/home";
+  static const String mainLayoutRoute  = "/mainlayout";
+  static const String workoutPlanScreenRoute  = "/workout";
+  static const String profileScreenRoute  = "/profile";
+  static const String recoveryHomeScreenRoute  = "/recoveryhome";
+  static const String editProfileScreenRoute  = "/editprofile";
+  static const String notificationScreenRoute  = "/notifications";
+  static const String manageSubscriptionRoute  = "/manageSubscription";
+  static const String freeTrialSubscriptionScreenRoute = "/free-trial";
+  static const String readyWarmupScreenRoute = "/warmup";
+  static const String warmupCounterScreenRoute = "/warmupCounter";
+  static const String flatBenchPressScreenRoute = "/flatBenchPress";
+  static const String warmupDoneScreenRoute = "/warmupDone";
+  static const String resetAndRecoverFlatScreenRoute = "/resetAndRecover";
+  static const String trainingScreenRoute= "/training";
+  static const String trainingDetailsScreenRoute= "/trainingDetails";
+  static const String inclineBenchPressScreenRoute= "/inclineBenchPress";
+  static const String resetRecoverInclineScreenRoute= "/resetRecoverIncline";
+  static const String declineBenchPressScreenRoute= "/declineBenchPress";
+  static const String workoutCompleteScreenRoute= "/workoutComplete";
+  static const String workoutCompletedScreenRoute= "/workoutCompleted";
+  static const String exerciseCompletedScreenRoute= "/exerciseCompleted";
+  static const String recoveryScreenRoute= "/recoveryScreen";
+  
+}

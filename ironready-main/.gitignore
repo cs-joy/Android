@@ -1,0 +1,170 @@
+# # Miscellaneous
+# *.class
+# *.log
+# *.pyc
+# *.swp
+# .DS_Store
+# .atom/
+# .build/
+# .buildlog/
+# .history
+# .svn/
+# .swiftpm/
+# migrate_working_dir/
+
+# # IntelliJ related
+# *.iml
+# *.ipr
+# *.iws
+# .idea/
+
+# # The .vscode folder contains launch configuration and tasks you configure in
+# # VS Code which you may wish to be included in version control, so this line
+# # is commented out by default.
+# #.vscode/
+
+# # Flutter/Dart/Pub related
+# **/doc/api/
+# **/ios/Flutter/.last_build_id
+# .dart_tool/
+# .flutter-plugins-dependencies
+# .pub-cache/
+# .pub/
+# /build/
+# /coverage/
+
+# # Symbolication related
+# app.*.symbols
+
+# # Obfuscation related
+# app.*.map.json
+
+# # Android Studio will place build artifacts here
+# /android/app/debug
+# /android/app/profile
+# /android/app/release
+####################################
+# macOS (CRITICAL)
+####################################
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# macOS Applications (VERY IMPORTANT)
+*.app
+**/*.app
+
+
+####################################
+# Flutter / Dart
+####################################
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+coverage/
+doc/api/
+.flutter-build/
+
+
+####################################
+# Android
+####################################
+android/.gradle/
+android/local.properties
+android/key.properties
+android/**/build/
+android/app/debug/
+android/app/profile/
+android/app/release/
+
+
+####################################
+# iOS
+####################################
+ios/Pods/
+ios/.symlinks/
+ios/Flutter/.last_build_id
+ios/Flutter/Flutter.framework
+ios/Flutter/App.framework
+ios/Flutter/engine/
+ios/Flutter/Generated.xcconfig
+ios/Flutter/flutter_export_environment.sh
+ios/Runner.xcworkspace/
+ios/DerivedData/
+
+
+####################################
+# Web
+####################################
+build/web/
+
+
+####################################
+# Desktop (Flutter)
+####################################
+linux/flutter/ephemeral/
+windows/flutter/ephemeral/
+macos/Flutter/ephemeral/
+
+
+####################################
+# IDEs & Editors
+####################################
+.idea/
+*.iml
+*.ipr
+*.iws
+
+.vscode/
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+.atom/
+.history/
+
+
+####################################
+# Logs & Temp files
+####################################
+*.log
+*.swp
+*.swo
+*.tmp
+*.temp
+*.bak
+*.old
+
+
+####################################
+# Misc
+####################################
+*.class
+*.pyc
+.migrate_working_dir/
+.swiftpm/
+.svn/
+.hg/
+.gitmodules
+
+
+####################################
+# Security
+####################################
+.env
+.env.*
+*.keystore
+*.jks
+*.pem
+*.p12
